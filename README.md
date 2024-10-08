@@ -32,9 +32,10 @@ const client = new Spot(apiKey, apiSecret);
 
 Feel free to open issues or submit pull requests if you find any bugs or have suggestions for improvements. If you're feeling generous and want to send me a tip that'd also be welcome!
 
-| Crypto         | Address                                    |
-| -------------- | ------------------------------------------ |
-| Ethereum (ETH) | 0x32a1511e239a4c28f5c75b52f16f34d59783c55e |
+| Crypto         | Address                                      |
+| -------------- | -------------------------------------------- |
+| Ethereum (ETH) | 0x32a1511e239a4c28f5c75b52f16f34d59783c55e   |
+| Solana (SOL)   | GjCAtQni2NU9xpCvTBqQVL7wN9TdY9WXiXyQ3ZRiN6LR |
 
 ## License
 
