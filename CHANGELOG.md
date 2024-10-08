@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/theothergothamdev/mexc-node-sdk/compare/v1.0.1...v1.1.0) (2024-10-08)
+
+
+### Features
+
+* Add type declarations ([0a72711](https://github.com/theothergothamdev/mexc-node-sdk/commit/0a72711ed0f713ea2634305a73efda4c37d74717))
+
 ## [1.0.1](https://github.com/theothergothamdev/mexc-node-sdk/compare/v1.0.0...v1.0.1) (2024-10-08)
 
 
