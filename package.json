@@ -16,7 +16,7 @@
   "files": [
     "lib"
   ],
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
