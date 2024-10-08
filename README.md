@@ -2,6 +2,11 @@
 
 <!-- [START badges] -->
 
+[![NPM version](https://img.shields.io/npm/v/@theothergothamdev/mexc-node-sdk.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-node-sdk)
+[![NPM downloads](https://img.shields.io/npm/dm/@theothergothamdev/mexc-node-sdk.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-node-sdk)
+
+![build](https://github.com/theothergothamdev/mexc-node-sdk/actions/workflows/build.yml/badge.svg)
+
 <!-- [END badges] -->
 
 This is a fork of [mexc-api-sdk repository](https://github.com/mexcdevelop/mexc-api-sdk/). The original repository does not seem to be maintained and their code did not work for me. This fork is a fork of the original repository and is maintained by me.
