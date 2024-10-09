@@ -2,8 +2,8 @@
 
 <!-- [START badges] -->
 
-[![NPM version](https://img.shields.io/npm/v/@theothergothamdev/mexc-sdk-nodejs.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-sdk-nodejs)
-[![NPM downloads](https://img.shields.io/npm/dm/@theothergothamdev/mexc-sdk-nodejs.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-sdk-nodejs)
+[![NPM version](https://img.shields.io/npm/v/@theothergothamdev/mexc-sdk.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-sdk)
+[![NPM downloads](https://img.shields.io/npm/dm/@theothergothamdev/mexc-sdk.svg)](https://www.npmjs.com/package/@theothergothamdev/mexc-sdk)
 
 ![build](https://github.com/theothergothamdev/mexc-sdk-nodejs/actions/workflows/build.yml/badge.svg)
 
