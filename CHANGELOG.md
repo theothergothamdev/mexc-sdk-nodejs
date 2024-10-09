@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/theothergothamdev/mexc-sdk-nodejs/compare/v1.1.0...v1.2.0) (2024-10-09)
+
+
+### Features
+
+* Rename package ([ce13196](https://github.com/theothergothamdev/mexc-sdk-nodejs/commit/ce131967588b170d449dd3d1c495ab2919f8e7b5))
+
 # [1.1.0](https://github.com/theothergothamdev/mexc-node-sdk/compare/v1.0.1...v1.1.0) (2024-10-08)
 
 
