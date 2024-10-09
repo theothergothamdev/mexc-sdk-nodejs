@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/theothergothamdev/mexc-sdk-nodejs/compare/v1.2.0...v1.2.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* Update README ([36e313a](https://github.com/theothergothamdev/mexc-sdk-nodejs/commit/36e313a8e7cd1255e9e1f3daca5d206abf893c3a))
+
 # [1.2.0](https://github.com/theothergothamdev/mexc-sdk-nodejs/compare/v1.1.0...v1.2.0) (2024-10-09)
 
 
