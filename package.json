@@ -1,7 +1,7 @@
 {
   "name": "@theothergothamdev/mexc-sdk",
   "version": "1.1.0",
-  "description": "Nodejs SDK for MEXC",
+  "description": "Unofficial Nodejs SDK for MEXC",
   "author": "theothergothamdev",
   "license": "MIT",
   "homepage": "https://github.com/theothergothamdev/mexc-sdk-nodejs#readme",
