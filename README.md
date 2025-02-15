@@ -9,7 +9,11 @@
 
 <!-- [END badges] -->
 
-This is a fork of [mexc-api-sdk repository](https://github.com/mexcdevelop/mexc-api-sdk/). The original repository does not seem to be maintained and their code did not work for me. This forked repository keeps the same core SDK but I have cleaned up the code a little is now maintained by me.
+This is a fork of [mexc-api-sdk repository](https://github.com/mexcdevelop/mexc-api-sdk/). The original repository does not seem to be maintained and their code did not work for me. This forked repository keeps the same core SDK but I have cleaned up the code a little.
+
+## Disclaimer
+
+⚠️ This SDK is **not affiliated with or endorsed by MEXC**. Usage must comply with the usage and terms of the [MEXC API Terms](https://www.mexc.com/terms). The authors are not responsible for any misuse of the API. Use this SDK at your own risk.
 
 ## Installation
 
@@ -28,17 +32,24 @@ const apiSecret = "apiSecret";
 const client = new Spot(apiKey, apiSecret);
 ```
 
+## Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub! Your support helps keep development active. 🚀  
+
 ## Contributing
 
-Feel free to open issues or submit pull requests if you find any bugs or have suggestions for improvements. If you're feeling generous and want to send me a tip that'd also be welcome!
-
-## Support
+Contributions are welcome! If you find this project useful and would like to support its development, you can donate crypto at the addresses below.
 
 | Crypto                    | Address                                      |
 | ------------------------- | -------------------------------------------- |
 | Binance Smart Chain (BSC) | 0x32a1511e239a4c28f5c75b52f16f34d59783c55e   |
 | Ethereum (ETH)            | 0x32a1511e239a4c28f5c75b52f16f34d59783c55e   |
 | Solana (SOL)              | GjCAtQni2NU9xpCvTBqQVL7wN9TdY9WXiXyQ3ZRiN6LR |
+
+### Disclaimer
+Donations are **voluntary and non-refundable**. Contributing funds does **not** grant any ownership, rights, or special privileges related to this project. This project is **not affiliated with DexScreener**. Please verify addresses before sending any funds, as transactions **cannot** be reversed.
+
+**Note:** Donations are **anonymous** unless you notify us. If you’d like to be recognized, feel free to open an issue or reach out.
 
 ## License
 
