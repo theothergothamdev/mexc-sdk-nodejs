@@ -1,13 +1,29 @@
 import { Base } from "./base";
 import { formatData } from "../util";
 
+import type {
+  ExchangeInfoOptions,
+  DepthOptions,
+  TradesOptions,
+  HistoricalTradesOptions,
+  AggTradesOptions,
+  KlinesOptions,
+  ExchangeInfo,
+  TickerPrice,
+  Ticker24hrPrice,
+  BookTicker,
+  Time,
+  DefaultSymbols,
+  AggTrade,
+  Trade,
+  Depth,
+  AvgPrice,
+  KlineInterval,
+} from "./interfaces";
+
 export class Market extends Base {
   /**
    * Helper to perform a public API request and format the result
-   * @param method - HTTP method (GET, POST, etc.)
-   * @param endpoint - API endpoint
-   * @param params - Query parameters
-   * @returns formatted data
    */
   private async requestAndFormat(method: string, endpoint: string, params: any = {}) {
     const rawData = await this.publicRequest(method, endpoint, params);
@@ -16,29 +32,15 @@ export class Market extends Base {
 
   /**
    * Exchange Information
-   *
-   * @param options
-   * ```
-   * [options.symbol] - symbol(optional) ex: BTCUSDT.
-   * [options.symbols] - for multiple symbols, add comma for each symbol in string. ex: BTCUSDT,BNBBTC.
-   * ```
-   * @returns
    */
-  async exchangeInfo(options: any = {}) {
+  async exchangeInfo(options: ExchangeInfoOptions = {}): Promise<ExchangeInfo> {
     return this.requestAndFormat("GET", "/exchangeInfo", options);
   }
 
   /**
    * Order Book
-   *
-   * @param symbol
-   * @param options
-   * ```
-   * [options.limit] - Default 100; max 5000. Valid limits:[5, 10, 20, 50, 100, 500, 1000, 5000].
-   * ```
-   * @returns
    */
-  async depth(symbol: string, options: any = { limit: 100 }) {
+  async depth(symbol: string, options: DepthOptions = { limit: 100 }): Promise<Depth> {
     return this.requestAndFormat("GET", "/depth", {
       symbol,
       ...options,
@@ -47,15 +49,8 @@ export class Market extends Base {
 
   /**
    * Recent Trades List
-   *
-   * @param symbol
-   * @param options
-   * ```
-   * [options.limit] - limit(optional) Default 500; max 1000.
-   * ```
-   * @returns
    */
-  async trades(symbol: string, options: any = { limit: 500 }) {
+  async trades(symbol: string, options: TradesOptions = { limit: 500 }): Promise<Trade[]> {
     return this.requestAndFormat("GET", "/trades", {
       symbol,
       ...options,
@@ -64,15 +59,8 @@ export class Market extends Base {
 
   /**
    * Old Trade Lookup
-   *
-   * @param symbol
-   * @param options
-   * ```
-   * [options.limit] - limit(optional) Default 500; max 1000.
-   * ```
-   * @returns
    */
-  async historicalTrades(symbol: string, options: any = { limit: 500 }) {
+  async historicalTrades(symbol: string, options: HistoricalTradesOptions = { limit: 500 }): Promise<Trade[]> {
     return this.requestAndFormat("GET", "/historicalTrades", {
       symbol,
       ...options,
@@ -82,17 +70,8 @@ export class Market extends Base {
   /**
    * Compressed/Aggregate Trades List
    *
-   * @param symbol
-   * @param options
-   * ```
-   * [options.fromId] - id to get aggregate trades from INCLUSIVE.
-   * [options.startTime] - Timestamp in ms to get aggregate trades from INCLUSIVE.
-   * [options.endTime] - Timestamp in ms to get aggregate trades until INCLUSIVE.
-   * [options.limit] - Default 500; max 1000.
-   * ```
-   * @returns
    */
-  async aggTrades(symbol: string, options: any = { limit: 500 }) {
+  async aggTrades(symbol: string, options: AggTradesOptions = { limit: 500 }): Promise<AggTrade[]> {
     return this.requestAndFormat("GET", "/aggTrades", {
       symbol,
       ...options,
@@ -101,18 +80,8 @@ export class Market extends Base {
 
   /**
    * Kline/Candlestick Data
-   *
-   * @param symbol
-   * @param interval
-   * @param options
-   * ```
-   * [options.startTime]
-   * [options.endTime]
-   * [options.limit] - Default 500; max 1000.
-   * ```
-   * @returns
    */
-  async klines(symbol: string, interval: string, options: any = { limit: 500 }) {
+  async klines(symbol: string, interval: KlineInterval, options: KlinesOptions = { limit: 500 }) {
     return this.requestAndFormat("GET", "/klines", {
       symbol,
       interval,
@@ -122,10 +91,8 @@ export class Market extends Base {
 
   /**
    * Current Average Price
-   *
-   * @param symbol
    */
-  async avgPrice(symbol: string) {
+  async avgPrice(symbol: string): Promise<AvgPrice> {
     return this.requestAndFormat("GET", "/avgPrice", {
       symbol,
     });
@@ -133,27 +100,34 @@ export class Market extends Base {
 
   /**
    * 24hr Ticker Price Change Statistics
-   *
-   * @param symbol
    */
-  async ticker24hr(symbol: string) {
+  async ticker24hr(symbol: string): Promise<Ticker24hrPrice> {
     return this.requestAndFormat("GET", "/ticker/24hr", { symbol });
   }
 
   /**
    * Symbol Price Ticker
-   *
-   * @param symbol
    */
-  async tickerPrice(symbol: string) {
+  async tickerPrice(symbol: string): Promise<TickerPrice> {
     return this.requestAndFormat("GET", "/ticker/price", { symbol });
   }
 
   /**
    * Symbol Order Book Ticker
-   * @param symbol
    */
-  async bookTicker(symbol: string) {
+  async bookTicker(symbol: string): Promise<BookTicker> {
     return this.requestAndFormat("GET", "/ticker/bookTicker", { symbol });
+  }
+
+  async defaultSymbols(symbol: string): Promise<DefaultSymbols> {
+    return this.requestAndFormat("GET", "/defaultSymbols", { symbol });
+  }
+
+  async ping(): Promise<{}> {
+    return this.requestAndFormat("GET", "/ping");
+  }
+
+  async time(): Promise<Time> {
+    return this.requestAndFormat("GET", "/time");
   }
 }
