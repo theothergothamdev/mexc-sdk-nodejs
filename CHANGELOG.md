@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/theothergothamdev/mexc-sdk-nodejs/compare/v1.2.2...v1.3.0) (2025-05-08)
+
+
+### Features
+
+* Updated Market types ([187829e](https://github.com/theothergothamdev/mexc-sdk-nodejs/commit/187829ef5290f9e103fb8bb94ef7d605760f7042))
+
 ## [1.2.2](https://github.com/theothergothamdev/mexc-sdk-nodejs/compare/v1.2.1...v1.2.2) (2024-10-09)
 
 
